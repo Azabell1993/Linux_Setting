@@ -206,11 +206,12 @@ call vundle#end()
 let g:jsx_ext_required = 0
 
 "isRuslan/vim~ex6
+call vundle#begin()
 Plugin 'SirVer/ultisnips'
 Plugin 'isRuslan/vim-es6'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'Raimondi/delimitMate'
-
+call vundle#end()
 
 
 "js Syntastic

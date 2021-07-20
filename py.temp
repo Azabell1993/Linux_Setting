@@ -1,0 +1,5 @@
+#!/usr/bin/python
+
+#python -m main main.py
+
+print("Hello World!\n")

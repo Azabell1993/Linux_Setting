@@ -189,8 +189,16 @@ iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD"i)
 
 Bundle 'Valloric/YouCompleteMe'
 
-"Script Header File Setting
-au bufnewfile *.sh 0r /home/azabell/.vim/sh_header.temp
+filetype indent on
+filetype plugin on
+syntax on
+
+augroup sh
+  au BufNewFile *.sh 0r ~/.vim/sh_header.temp
+ "au BufWritePost *.sh,*.pl,*.py,*.cgi :silent !chmod a+x <afile>
+augroup end
+
+
 
 "C/C++ Header File Setting
 
@@ -225,6 +233,12 @@ vmap ,c :s/^/\/\//g<ENTER>
 "myjava.vim Setting
 au BufNewFile,BufRead *.java :source ~/.vim/myjava.vim
 
+"*.py header
+au bufnewfile *.py 0r /home/jiwoo/.vim/py.temp
+
+"*.java header
+au bufnewfile *.java 0r /home/jiwoo/.vim/java.temp
+
 "java"
 autocmd Filetype java set makeprg=javac\ %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
@@ -258,4 +272,3 @@ exec "!~/.vim/markdown.pl % > %.html &"
 exec "!firefox %.html &"
 endif
 endfunc
-

@@ -34,6 +34,7 @@ set gfn=jin3.pcf\9
 
 
 "VundleVim/Vundle
+"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 filetype indent on
 filetype plugin on                  " required
